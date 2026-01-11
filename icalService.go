@@ -9,6 +9,7 @@ import (
 	"time"
 
 	ical "github.com/arran4/golang-ical"
+	"github.com/joho/godotenv"
 )
 
 var (
@@ -21,6 +22,7 @@ var (
 )
 
 func init() {
+	_ = godotenv.Load()
 	sourceURL = os.Getenv("ICAL_SOURCE_URL")
 	accessToken = os.Getenv("ACCESS_TOKEN")
 	if sourceURL == "" || accessToken == "" {

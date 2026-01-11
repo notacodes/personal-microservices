@@ -10,6 +10,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -w" -o server .
 FROM alpine:3.18
 RUN apk add --no-cache ca-certificates \
     && adduser -D appuser
+RUN apk add --no-cache tzdata
 
 USER appuser
 COPY --from=build /app/server /usr/local/bin/server
