@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  personal-microservices-ical:
+    image: ghcr.io/${GITHUB_USER:-youruser}/personal-microservices:latest
+    build: .
+    ports:
+      - "3411:3411"
+    environment:
+      - ICAL_SOURCE_URL=${ICAL_SOURCE_URL}
+      - ACCESS_TOKEN=${ACCESS_TOKEN}
+    restart: unless-stopped
+

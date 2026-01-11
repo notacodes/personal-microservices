@@ -1,0 +1,9 @@
+.env
+server
+*.exe
+*.log
+.idea/
+.vscode/
+.DS_Store
+/release-notes.txt
+
