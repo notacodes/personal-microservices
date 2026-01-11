@@ -1,4 +1,4 @@
-module github.com/your-github-username/personal-microservices
+module github.com/notacodes/personal-microservices
 
 go 1.25
 

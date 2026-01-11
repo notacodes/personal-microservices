@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   personal-microservices-ical:
-    image: ghcr.io/${GITHUB_USER:-youruser}/personal-microservices:latest
+    image: ghcr.io/notacodes/personal-microservices:latest
     build: .
     ports:
       - "3411:3411"
